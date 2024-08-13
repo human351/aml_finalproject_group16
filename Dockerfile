@@ -1,23 +1,22 @@
-# Use the official Python image as a base image
+# Use the official Python image from the Docker Hub
 FROM python:3.10-slim
 
-# Use an official TensorFlow runtime as a parent image
-FROM tensorflow/tensorflow:2.11.0
+# Set environment variables
+ENV FLASK_APP=app.py
+ENV FLASK_RUN_HOST=0.0.0.0
 
-# Set the working directory in the container
+# Set the working directory
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
-COPY . /app
-
-# Install any needed packages specified in requirements.txt
+# Copy the requirements file and install dependencies
+COPY requirements.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Make port 8080 available to the world outside this container
-EXPOSE 8080
+# Copy the rest of the application code
+COPY . .
 
-# Define environment variable
-ENV NAME XRayPneumoniaChecker
+# Expose the port on which the Flask app will run
+EXPOSE 5000
 
-# Run app.py when the container launches
-CMD ["gunicorn", "--bind", "0.0.0.0:8080", "app:app"]
+# Run the Flask app
+CMD ["flask", "run"]
