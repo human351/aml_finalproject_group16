@@ -1,18 +1,4 @@
 Flask
-Jinja2
-Pillow
-Werkzeug
-blinker
-click
-flatbuffers
-google-auth-oauthlib
-google-auth
+tensorflow
+numpy
 gunicorn
-itsdangerous
-protobuf  # Downgrade to satisfy tensorflow-cpu 2.11.0
-tensorboard # Downgrade to satisfy tensorflow-cpu 2.11.0
-tensorboard-data-server
-tensorflow # Match the TensorFlow version to the TensorFlow-CPU version
-tensorflow-cpu
-tensorflow-estimator # Match to TensorFlow version
-keras # Match to TensorFlow version
