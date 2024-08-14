@@ -82,7 +82,6 @@ def predict():
 def uploaded_file(filename):
     return send_from_directory('uploads', filename)
 
-if __name__ == '__main__':
-    if not os.path.exists('uploads'):
-        os.makedirs('uploads')
-    app.run(debug=True)
+# Ensure the 'uploads' directory exists
+if not os.path.exists('uploads'):
+    os.makedirs('uploads')
