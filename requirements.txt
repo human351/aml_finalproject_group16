@@ -1,26 +1,18 @@
-Flask==3.0.3
-Jinja2==3.1.4
-Pillow==10.4.0
-Werkzeug==3.0.3
-blinker==1.8.2
-click==8.1.7
-flatbuffers==24.3.25
-google-auth-oauthlib==1.0.0
-google-auth>=2.15.0
-gunicorn==23.0.0
-itsdangerous==2.2.0
-protobuf==3.19.6  # Downgrade to satisfy tensorflow-cpu 2.11.0
-tensorboard==2.11.2  # Downgrade to satisfy tensorflow-cpu 2.11.0
-tensorboard-data-server==0.7.2
-tensorflow==2.11.0  # Match the TensorFlow version to the TensorFlow-CPU version
-tensorflow-cpu==2.11.0
-tensorflow-estimator==2.11.0  # Match to TensorFlow version
-keras==2.11.0  # Match to TensorFlow version
-
-# Additional necessary libraries
-setuptools>=58.0.4
-wheel>=0.38.4
-six>=1.16.0
-h5py>=3.1.0
-numpy>=1.21.6
-scipy>=1.7.3
+Flask
+Jinja2
+Pillow
+Werkzeug
+blinker
+click
+flatbuffers
+google-auth-oauthlib
+google-auth
+gunicorn
+itsdangerous
+protobuf  # Downgrade to satisfy tensorflow-cpu 2.11.0
+tensorboard # Downgrade to satisfy tensorflow-cpu 2.11.0
+tensorboard-data-server
+tensorflow # Match the TensorFlow version to the TensorFlow-CPU version
+tensorflow-cpu
+tensorflow-estimator # Match to TensorFlow version
+keras # Match to TensorFlow version
