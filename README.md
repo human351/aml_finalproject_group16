@@ -102,10 +102,6 @@ To run the application using Docker:
 - **Error Handling**: Check console logs for error messages if the application is not functioning as expected.
 - **File Availability**: Ensure all necessary files, including `my_model.h5`, are present in the project directory.
 
-## License
-
-This project is licensed under the MIT License. For more details, refer to the [LICENSE](LICENSE) file.
-
 ## Acknowledgments
 
 We acknowledge the contributions of the open-source community and the tools that have facilitated the development of this project.
